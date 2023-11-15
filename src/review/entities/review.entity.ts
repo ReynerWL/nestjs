@@ -10,6 +10,9 @@ export class Review{
     @ManyToOne(() => User, (user) => user.reviews)
     user: User
 
+    @Column({type: 'int'})
+    rating: number
+
     @Column({type: 'text'})
     text: string
 
